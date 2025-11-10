@@ -1,5 +1,4 @@
 html {
-  /*background: url('./assets/background.png') no-repeat center center fixed;*/
   background: url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/background.png?raw=true') no-repeat center center fixed;
   box-sizing: border-box;
   -webkit-background-size: cover;
@@ -26,12 +25,12 @@ h2 {
 }
 
 #start {
-    text-align: center;
-    font-size: 30px;
+  text-align: center;
+  font-size: 30px;
 }
 
 #timer{
-    color: white;
+  color: white;
 }
 
 .grid {
@@ -40,7 +39,6 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  /*cursor: url('./assets/mallet.png'), pointer;*/
 }
 
 .hole {
@@ -51,7 +49,6 @@ h2 {
 
 .hole:after {
   display: block;
-  /*background: url("./assets/hole.png") bottom center no-repeat;*/
   background: url("https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/hole.png?raw=true") bottom center no-repeat;
   background-size:contain;
   content:'';
@@ -64,19 +61,40 @@ h2 {
 }
 
 .mole {
-  /*background:url('./assets/mole.png') bottom center no-repeat;*/
   background:url('https://github.com/Thinkful-Ed/js-dev-final-capstone-starter/blob/main/assets/mole.png?raw=true') bottom center no-repeat;
   background-size: 40%;
   position: absolute;
   top: 100%;
   width: 100%;
   height: 100%;
-  /*transition: transform 0.5s;*/
   transition: all 1s;
   pointer-events:auto;
 }
 
 .hole.show .mole {
   top: 0;
-  /*transform: scale(1.1);*/
+}
+
+
+body {
+  display: flex;
+  flex-direction: column; /* stacks title, score, button, grid vertically */
+  align-items: center;    /* centers horizontally */
+  justify-content: center; /* centers vertically */
+  height: 100vh;          /* full screen height */
+  margin: 0;
+}
+#start {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start:hover {
+  background-color: #45a049;
 }
